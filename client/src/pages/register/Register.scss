@@ -1,0 +1,31 @@
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-card {
+    width: fit-content;
+    height: fit-content;
+    padding: 2em;
+
+    .form-title {
+      font-weight: 600;
+      font-size: 2rem;
+
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      padding: 2em;
+
+      .acc-exists {
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+}

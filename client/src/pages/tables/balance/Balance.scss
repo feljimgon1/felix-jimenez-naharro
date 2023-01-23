@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.balance-container {
+  .balance-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+  }
+}
+.table-container {
+  margin: 3em auto;
+  overflow: auto;
+  padding: 1em;
+  width: 100vw;
+  .composed-item {
+    font-weight: 700;
+    padding-left: 2em !important;
+  }
+}
+
+@media(min-width: 768px) {
+  .table-container {
+    width: 25vw;
+  }
+}
