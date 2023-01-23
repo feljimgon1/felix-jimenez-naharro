@@ -1,5 +1,4 @@
 import './App.scss';
-// import { Routes, Route } from 'react-router-dom'
 import WelcomeHeader from './components/welcome/welcomeHeader/WelcomeHeader';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
@@ -19,30 +18,20 @@ const router = createBrowserRouter([
   { path: '/login', element: <Login /> },
   {
     path: '/dashboard', element: <Dashboard />, children: [
-      { path: 'balance', element: <Balance />},
+      { path: 'balance', element: <Balance /> },
       { path: 'cuenta-perdidas-ganancias', element: <CuentaPerdidasGanancias /> },
       { path: 'estrategia-mercado', element: <EstrategiaMercado /> },
       { path: 'politica-inversion', element: <PoliticaInversion /> },
       { path: 'politica-financiacion', element: <PoliticaFinanciacion /> },
       { path: 'estrategia-circulante', element: <EstrategiaCirculante /> },
       { path: 'resultados', element: <Results /> }
-    ]},
+    ]
+  },
 ]);
 
 function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-      {/* <Routes>
-        <Route path="" element={<WelcomeHeader></WelcomeHeader>} />
-        <Route path="/register" element={<Register></Register>} />
-        <Route path="/login" element={<Login></Login>} />
-        <Route path="/dashboard">
-          <Route index element={<Dashboard/>} />
-          <Route path="balance" element={<Balance/>} />
-        </Route>
-      </Routes> */}
-    </>
+    <RouterProvider router={router} />
   );
 }
 

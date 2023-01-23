@@ -1,0 +1,29 @@
+.table-container {
+  margin: 3em auto;
+  overflow: auto;
+  padding: 1em;
+  width: 100vw;
+
+  .composed-item {
+    font-weight: 700;
+    padding-left: 2em !important;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: flex-end;
+    .btn-edit {
+      background-color: #38444c;
+      margin: 1em;
+      &:hover {
+        background-color: #38447f;
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .table-container {
+    width: 25vw;
+  }
+}

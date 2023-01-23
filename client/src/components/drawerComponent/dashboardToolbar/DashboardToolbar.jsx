@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import MuiAppBar from '@mui/material/AppBar';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 
 export default function DashboardToolbar({ drawerWidth, open, handleDrawerOpen }) {
@@ -39,7 +40,7 @@ export default function DashboardToolbar({ drawerWidth, open, handleDrawerOpen }
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap component="div">
-                    
+                    <Link to="/" style={{fontWeight: '700', textDecoration: 'none', color: '#38444c'}}>Home</Link>
                 </Typography>
             </Toolbar>
         </AppBar>

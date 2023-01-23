@@ -11,7 +11,6 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import DashboardToolbar from './dashboardToolbar/DashboardToolbar';
 
@@ -116,7 +115,7 @@ export default function DrawerComponent() {
               <NavLink key={index} className="nav-link" to={table.path}>
                 <ListItem disablePadding>
                   <ListItemButton>
-                    <ListItemText primary={table.name} />
+                     {table.name}
                   </ListItemButton>
                 </ListItem>
               </NavLink>
@@ -128,7 +127,7 @@ export default function DrawerComponent() {
               <NavLink key={index} className="nav-link" to={table.path}>
                 <ListItem disablePadding>
                   <ListItemButton>
-                    <ListItemText primary={table.name} />
+                    {table.name}
                   </ListItemButton>
                 </ListItem>
               </NavLink>
