@@ -1,6 +1,29 @@
-.balance-form-dialog {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 1em;
+.main-title {
+  font-weight: 600;
+  text-align: center;
+  font-size: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+  margin: 1em;
+}
+
+.btn-contained {
+  background-color: #38444c !important;
+  margin: 1em;
+
+  &:hover {
+    background-color: #38447f !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .balance-form-dialog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

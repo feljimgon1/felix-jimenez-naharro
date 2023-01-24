@@ -75,7 +75,7 @@ export default function DrawerComponent() {
 
   return (
     <div>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex'}}>
         <CssBaseline />
         <DashboardToolbar drawerWidth={drawerWidth} open={open} handleDrawerOpen={handleDrawerOpen}></DashboardToolbar>
         <Drawer
@@ -134,8 +134,9 @@ export default function DrawerComponent() {
             ))}
           </List>
         </Drawer>
-        <Main open={open} sx={{padding: '5em'}}>
-          <DrawerHeader />
+        <Main open={open}>
+          <DrawerHeader/>
+          
           <Outlet />
         </Main>
       </Box>
