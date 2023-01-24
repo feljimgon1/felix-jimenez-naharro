@@ -1,4 +1,4 @@
-import { Button, Card, TextField } from '@mui/material'
+import { Button, TextField } from '@mui/material'
 import React from 'react'
 import './Login.scss'
 
@@ -9,7 +9,7 @@ const submit = () => {
 export default function Login() {
   return (
     <div className='login-container'>
-        <Card className='form-card'>
+        <div className='form-card'>
                 <div className="form-title">
                     Iniciar sesión
                 </div>
@@ -26,7 +26,7 @@ export default function Login() {
                         type="password" />
                     <Button sx={{width: 'fit-content', margin: '0 auto'}} variant="contained">Iniciar sesión</Button>
                 </form>
-            </Card>
+            </div>
     </div>
   )
 }

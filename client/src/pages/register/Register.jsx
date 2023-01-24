@@ -1,6 +1,6 @@
 import React from 'react'
 import './Register.scss'
-import { Button, Card, TextField } from '@mui/material'
+import { Button, TextField } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 export default function Register() {
@@ -11,7 +11,7 @@ export default function Register() {
 
     return (
         <div className='register-container'>
-            <Card className='form-card'>
+            <div className='form-card'>
                 <div className="form-title">
                     Registro
                 </div>
@@ -44,7 +44,7 @@ export default function Register() {
                     <div className='acc-exists'>¿Ya tiene cuenta? Pulse <Link to="/login">aquí</Link></div>
                     <Button sx={{width: 'fit-content', margin: '0 auto'}} variant="contained">Registro</Button>
                 </form>
-            </Card>
+            </div>
         </div>
     )
 }
