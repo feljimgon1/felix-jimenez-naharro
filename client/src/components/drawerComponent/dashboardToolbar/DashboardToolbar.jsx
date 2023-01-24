@@ -40,7 +40,7 @@ export default function DashboardToolbar({ drawerWidth, open, handleDrawerOpen }
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap component="div">
-                    <Link to="/" style={{fontWeight: '700', textDecoration: 'none', color: '#38444c'}}>Home</Link>
+                    <Link to="/" style={{fontWeight: '700', textDecoration: 'none', color: '#38444c'}}>Inicio</Link>
                 </Typography>
             </Toolbar>
         </AppBar>
