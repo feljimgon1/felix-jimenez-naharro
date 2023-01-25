@@ -42,7 +42,7 @@ export default function Register() {
                         variant="outlined"
                         type="password" />
                     <div className='acc-exists'>¿Ya tiene cuenta? Pulse <Link to="/login">aquí</Link></div>
-                    <Button sx={{width: 'fit-content', margin: '0 auto'}} variant="contained">Registro</Button>
+                    <Button className='btn centered' variant="contained">Registro</Button>
                 </form>
             </div>
         </div>

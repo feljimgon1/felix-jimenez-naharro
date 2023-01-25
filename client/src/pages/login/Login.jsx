@@ -24,7 +24,7 @@ export default function Login() {
                         label="Contraseña"
                         variant="outlined"
                         type="password" />
-                    <Button sx={{width: 'fit-content', margin: '0 auto'}} variant="contained">Iniciar sesión</Button>
+                    <Button className='btn centered' variant="contained">Iniciar sesión</Button>
                 </form>
             </div>
     </div>
