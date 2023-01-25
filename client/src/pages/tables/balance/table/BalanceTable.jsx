@@ -1,4 +1,4 @@
-import { Button, Paper, Table, TableBody, TableCell, TableRow } from '@mui/material'
+import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material'
 import React from 'react'
 import './BalanceTable.scss'
 import BalanceForm from '../../../../components/modals/balance/BalanceForm';
@@ -43,7 +43,7 @@ export default function BalanceTable() {
                 <Button variant='contained' className='btn-edit' onClick={handleClickOpen}>Editar</Button>
             </div>
             <div className="balance-tables-container">
-                <Paper className='table-container'>
+                <div className='table-container'>
                     <Table>
                         <TableBody>
                             {activo.map((row) => (
@@ -59,8 +59,8 @@ export default function BalanceTable() {
                             ))}
                         </TableBody>
                     </Table>
-                </Paper>
-                <Paper className='table-container'>
+                </div>
+                <div className='table-container'>
                     <Table>
                         <TableBody>
                             {pasivo.map((row) => (
@@ -76,7 +76,7 @@ export default function BalanceTable() {
                             ))}
                         </TableBody>
                     </Table>
-                </Paper>
+                </div>
             </div>
         </>
     )
