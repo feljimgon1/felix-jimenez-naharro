@@ -13,7 +13,7 @@ export default function BalanceForm({ open, setOpen }) {
     };
 
     return (
-        <Dialog open={open} onClose={handleClose}>
+        <Dialog open={open} onClose={handleClose} className='balance-form-container'>
             <DialogContent>
                 <form className='balance-form-dialog'>
                     <div className='activos'>

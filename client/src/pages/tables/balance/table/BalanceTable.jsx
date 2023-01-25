@@ -4,11 +4,11 @@ import './BalanceTable.scss'
 import BalanceForm from '../../../../components/modals/balance/BalanceForm';
 
 const activo = [
-    { name: 'Inmovilizado', value: 0, composed: true },
+    { name: 'Activo no corriente', value: 0, composed: true },
     { name: 'Inmovilizado inmaterial', value: 0, composed: false },
     { name: 'Inmovilizado material', value: 0, composed: false },
     { name: 'Otros activos fijos', value: 0, composed: false },
-    { name: 'Activo circulante', value: 0, composed: true },
+    { name: 'Activo corriente', value: 0, composed: true },
     { name: 'Existencias', value: 0, composed: false },
     { name: 'Deudores', value: 0, composed: false },
     { name: 'Otros activos líquidos', value: 0, composed: false }
@@ -18,11 +18,11 @@ const pasivo = [
     { name: 'Fondos propios', value: 0, composed: true },
     { name: 'Capital suscrito', value: 0, composed: false },
     { name: 'Otros fondos propios', value: 0, composed: false },
-    { name: 'Pasivo fijo', value: 0, composed: true },
-    { name: 'Acreedores a largo plazo', value: 0, composed: false },
-    { name: 'Otros pasivos fijos', value: 0, composed: false },
+    { name: 'Pasivo no corriente', value: 0, composed: true },
+    { name: 'Deuda antigua', value: 0, composed: false },
+    { name: 'Deuda nueva', value: 0, composed: false },
     { name: 'Provisiones', value: 0, composed: false },
-    { name: 'Pasivo líquido', value: 0, composed: true },
+    { name: 'Pasivo corriente', value: 0, composed: true },
     { name: 'Deudas financieras', value: 0, composed: false },
     { name: 'Acreedores comerciales', value: 0, composed: false },
     { name: 'Otros pasivos líquidos', value: 0, composed: false }
