@@ -4,13 +4,10 @@ import './Dashboard.scss'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import DashboardToolbar from '../../components/drawerComponent/dashboardToolbar/DashboardToolbar';
 
@@ -98,41 +95,41 @@ export default function Dashboard() {
             </IconButton>
           </DrawerHeader>
           <Divider />
-          <List>
+          <div className='nav-menu'>
             {situationTables.map((table, index) => (
               <NavLink key={index} className="nav-link" to={table.path}>
-                <ListItem  disablePadding>
-                  <ListItemButton>
+                {/* <ListItem  disablePadding>
+                  <ListItemButton> */}
                     {table.name}
-                  </ListItemButton>
-                </ListItem>
+                  {/* </ListItemButton>
+                </ListItem> */}
               </NavLink>
             ))}
-          </List>
+          </div>
           <Divider />
-          <List>
+          <div className='nav-menu'>
             {steps.map((table, index) => (
               <NavLink key={index} className="nav-link" to={table.path}>
-                <ListItem disablePadding>
-                  <ListItemButton>
+                {/* <ListItem disablePadding>
+                  <ListItemButton> */}
                      {table.name}
-                  </ListItemButton>
-                </ListItem>
+                  {/* </ListItemButton>
+                </ListItem> */}
               </NavLink>
             ))}
-          </List>
+          </div>
           <Divider />
-          <List>
+          <div className='nav-menu'>
             {results.map((table, index) => (
               <NavLink key={index} className="nav-link" to={table.path}>
-                <ListItem disablePadding>
-                  <ListItemButton>
+                {/* <ListItem disablePadding> */}
+                  {/* <ListItemButton> */}
                     {table.name}
-                  </ListItemButton>
-                </ListItem>
+                  {/* </ListItemButton> */}
+                {/* </ListItem> */}
               </NavLink>
             ))}
-          </List>
+          </div>
         </Drawer>
         <Main open={open}>
           <DrawerHeader/>

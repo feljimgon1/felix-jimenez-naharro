@@ -18,12 +18,21 @@
   }
 }
 
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
 .nav-link {
   text-decoration: none;
   color: gray;
+  padding: .75em;
+  margin: .25em;
+  border-radius: 5px;
 }
 
 .active {
   font-weight: bold !important;
-  color: #38444c;
+  color: #f0f0f0;
+  background-color: #38444c;
 }
