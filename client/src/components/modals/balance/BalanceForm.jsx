@@ -19,13 +19,13 @@ export default function BalanceForm({ open, setOpen }) {
                     <div className='activos'>
                         <div className="main-title">Activos</div>
                         <div className="field">
-                            <div className="title">Inmovilizado</div>
+                            <div className="title">Activo no corriente</div>
                             <TextField type='number' id="filled-basic" label="Inmovilizado inmaterial" variant="filled" />
                             <TextField type='number' id="filled-basic" label="Inmovilizado material" variant="filled" />
                             <TextField type='number' id="filled-basic" label="Otros activos fijos" variant="filled" />
                         </div>
                         <div className="field">
-                            <div className="title">Activo circulante</div>
+                            <div className="title">Activo corriente</div>
                             <TextField type='number' id="filled-basic" label="Existencias" variant="filled" />
                             <TextField type='number' id="filled-basic" label="Deudores" variant="filled" />
                             <TextField type='number' id="filled-basic" label="Otros activos líquidos" variant="filled" />
@@ -39,13 +39,12 @@ export default function BalanceForm({ open, setOpen }) {
                             <TextField type='number' id="filled-basic" label="Otros fondos propios" variant="filled" />
                         </div>
                         <div className="field">
-                            <div className="title">Pasivo fijo</div>
-                            <TextField type='number' id="filled-basic" label="Acreedores a largo plazo" variant="filled" />
-                            <TextField type='number' id="filled-basic" label="Otros pasivos fijos" variant="filled" />
-                            <TextField type='number' id="filled-basic" label="Provisiones" variant="filled" />
+                            <div className="title">Pasivo no corriente</div>
+                            <TextField type='number' id="filled-basic" label="Deuda antigua" variant="filled" />
+                            <TextField type='number' id="filled-basic" label="Deuda nueva" variant="filled" />
                         </div>
                         <div className="field">
-                            <div className="title">Pasivo líquido</div>
+                            <div className="title">Pasivo corriente</div>
                             <TextField type='number' id="filled-basic" label="Deudas financieras" variant="filled" />
                             <TextField type='number' id="filled-basic" label="Acreedores comerciales" variant="filled" />
                             <TextField type='number' id="filled-basic" label="Otros pasivos líquidos" variant="filled" />
