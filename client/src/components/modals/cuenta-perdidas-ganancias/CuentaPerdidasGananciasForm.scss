@@ -1,0 +1,18 @@
+.cuenta-perdidas-ganancias-form-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .field {
+      display: flex;
+      margin: .5em;
+      align-items:  flex-start;
+      .title {
+        font-size: 14px;
+      }
+    }
+  }
+}

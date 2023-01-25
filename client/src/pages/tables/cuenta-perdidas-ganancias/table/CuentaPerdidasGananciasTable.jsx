@@ -1,17 +1,29 @@
 import React from 'react';
 import './CuentaPerdidasGananciasTable.scss';
 import CuentaPerdidasGananciasForm from '../../../../components/modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
-import { Button, Paper, Table, TableBody, TableCell, TableRow } from '@mui/material';
+import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material';
 
 const rows = [
-  { name: 'Inmovilizado', value: 0, composed: true },
-  { name: 'Inmovilizado inmaterial', value: 0, composed: false },
-  { name: 'Inmovilizado material', value: 0, composed: false },
-  { name: 'Otros activos fijos', value: 0, composed: false },
-  { name: 'Activo circulante', value: 0, composed: true },
-  { name: 'Existencias', value: 0, composed: false },
-  { name: 'Deudores', value: 0, composed: false },
-  { name: 'Otros activos líquidos', value: 0, composed: false }
+  { name: 'Ingresos de explotación', value: 0, composed: true },
+  { name: 'Importe neto cifra de ventas', value: 0, composed: false },
+  { name: 'Otros ingresos de explotación', value: 0, composed: false },
+  { name: 'TRPPI', value: 0, composed: false },
+  { name: 'Consumo de mercaderías y materias', value: 0, composed: false },
+  { name: 'Gasto de personal', value: 0, composed: false },
+  { name: 'Otros gastos de explotación', value: 0, composed: false },
+  { name: 'EBITDA', value: 0, composed: true },
+  { name: 'CAT', value: 0, composed: false },
+  { name: 'BAIT', value: 0, composed: true },
+  { name: 'Ingresos financieros', value: 0, composed: false },
+  { name: 'Gastos financieros', value: 0, composed: false },
+  { name: 'Resultado financiero', value: 0, composed: true },
+  { name: 'Resultado ordinarios antes de impuestos', value: 0, composed: true },
+  { name: 'Impuesto sobre sociedades', value: 0, composed: false },
+  { name: 'Resultado actividades ordinarias', value: 0, composed: true },
+  { name: 'Ingresos ordinarios', value: 0, composed: false },
+  { name: 'Gastos ordinarios', value: 0, composed: false },
+  { name: 'Resultado actividades extraordinarias', value: 0, composed: true },
+  { name: 'Resultado del ejercicio', value: 0, composed: true },
 ];
 
 export default function CuentaPerdidasGananciasTable() {
@@ -29,7 +41,7 @@ export default function CuentaPerdidasGananciasTable() {
         <Button variant='contained' className='btn-edit' onClick={handleClickOpen}>Editar</Button>
       </div>
       <div className="cuenta-perdidas-ganancias-tables-container">
-        <Paper className='table-container'>
+        <div className='table-container'>
           <Table>
             <TableBody>
               {rows.map((row) => (
@@ -45,7 +57,7 @@ export default function CuentaPerdidasGananciasTable() {
               ))}
             </TableBody>
           </Table>
-        </Paper>
+        </div>
       </div>
     </>
 
