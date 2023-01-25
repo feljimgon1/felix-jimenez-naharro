@@ -57,7 +57,62 @@ const results = [
   { name: 'Resultados', path: 'resultados' }
 ];
 
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) => ({
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: `-${drawerWidth}px`,
+    ...(open && {
+      transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      marginLeft: 0,
+    }),
+  }),
+);
+
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: 'flex-end',
+}));
+
+const situationTables = [
+  { name: 'Balance de situación', path: 'balance' },
+  { name: 'Cuenta de pérdidas y ganancias', path: 'cuenta-perdidas-ganancias' },
+];
+
+const steps = [
+  { name: 'Estrategia de mercado', path: 'estrategia-mercado' },
+  { name: 'Política de inversión', path: 'politica-inversion' },
+  { name: 'Política de financiación', path: 'politica-financiacion' },
+  { name: 'Estrategia de circulante', path: 'estrategia-circulante' }
+];
+
+const results = [
+  { name: 'Resultados', path: 'resultados' }
+];
+
 export default function DrawerComponent() {
+
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(true);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
@@ -72,7 +127,7 @@ export default function DrawerComponent() {
 
   return (
     <div>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex'}}>
         <CssBaseline />
         <DashboardToolbar drawerWidth={drawerWidth} open={open} handleDrawerOpen={handleDrawerOpen}></DashboardToolbar>
         <Drawer
@@ -121,7 +176,6 @@ export default function DrawerComponent() {
         </Drawer>
         <Main open={open}>
           <DrawerHeader />
-
           <Outlet />
         </Main>
       </Box>

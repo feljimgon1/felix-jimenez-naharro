@@ -1,7 +1,7 @@
 import { Button, Paper, Table, TableBody, TableCell, TableRow } from '@mui/material'
 import React from 'react'
 import './BalanceTable.scss'
-import BalanceForm from '../../../../components/modals/BalanceForm';
+import BalanceForm from '../../../../components/modals/balance/BalanceForm';
 
 const activo = [
     { name: 'Inmovilizado', value: 0, composed: true },
