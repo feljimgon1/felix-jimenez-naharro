@@ -1,6 +1,6 @@
 import React from 'react';
 import './CuentaPerdidasGananciasTable.scss';
-import CuentaPerdidasGananciasForm from '../../../../components/modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
+import CuentaPerdidasGananciasForm from '../../modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
 import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material';
 
 const rows = [

@@ -1,7 +1,7 @@
-import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material'
 import React from 'react'
+import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material'
 import './BalanceTable.scss'
-import BalanceForm from '../../../../components/modals/balance/BalanceForm';
+import BalanceForm from '../../modals/balance/BalanceForm';
 
 const activo = [
     { name: 'Activo no corriente', value: 0, composed: true },

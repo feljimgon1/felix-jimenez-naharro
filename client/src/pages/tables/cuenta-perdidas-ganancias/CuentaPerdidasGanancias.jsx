@@ -1,5 +1,5 @@
 import React from 'react';
-import CuentaPerdidasGananciasTable from './table/CuentaPerdidasGananciasTable';
+import CuentaPerdidasGananciasTable from '../../../components/tables/cuenta-perdidas-ganancias/CuentaPerdidasGananciasTable';
 import './CuentaPerdidasGanancias.scss';
 
 export default function CuentaPerdidasGanancias() {
