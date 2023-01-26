@@ -73,7 +73,7 @@ export default function EstrategiaMercadoForm({ open, setOpen }) {
   console.log(width)
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={handleClose} className='estrategia-mercado-form-container'>
       <DialogContent className='estrategia-mercado-dialog-content'>
         <form>
           <Stepper nonLinear activeStep={activeStep} orientation={width < 768 ? 'vertical' : 'horizontal'}>
