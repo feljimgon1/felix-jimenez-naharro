@@ -1,6 +1,6 @@
 import React from 'react'
 import './Balance.scss'
-import BalanceTable from './table/BalanceTable'
+import BalanceTable from '../../../components/tables/balance/BalanceTable'
 
 export default function Balance() {
   return (

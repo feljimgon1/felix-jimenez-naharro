@@ -119,7 +119,7 @@ export default function DrawerComponent() {
             ))}
           </div>
         </Drawer>
-        <Main open={open}>
+        <Main open={open} className='main-container'>
           <DrawerHeader />
           <Outlet />
         </Main>
