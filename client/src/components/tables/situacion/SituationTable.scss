@@ -13,37 +13,29 @@
   }
 }
 
-.cuenta-perdidas-ganancias-tables-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
-}
-
 .table-container {
   margin: 2em auto;
   overflow: auto;
   padding: 1em;
   height: fit-content;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
 
   .composed-item {
     font-weight: 700;
     padding-left: 2em !important;
   }
+
 }
 
 @media(min-width: 768px) {
   .actions-container {
     display: block !important;
     margin: 1em 0 0 3em !important;
-  }
 
-  .cuenta-perdidas-ganancias-tables-container {
-    flex-direction: row;
   }
-
+  
   .table-container {
-    width: 40vw;
+    width: 60vw;
   }
-
 }

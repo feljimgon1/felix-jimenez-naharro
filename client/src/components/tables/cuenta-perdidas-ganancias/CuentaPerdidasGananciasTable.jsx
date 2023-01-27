@@ -1,7 +1,7 @@
 import React from 'react';
-import './CuentaPerdidasGananciasTable.scss';
 import CuentaPerdidasGananciasForm from '../../modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
-import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material';
+import SituationTable from '../situacion/SituationTable';
+import ActionsTable from '../../actions/ActionsTable';
 
 const rows = [
   { name: 'Ingresos de explotación', value: 0, composed: true },
@@ -31,34 +31,14 @@ export default function CuentaPerdidasGananciasTable() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-      setOpen(true);
+    setOpen(true);
   };
 
   return (
     <>
       <CuentaPerdidasGananciasForm open={open} setOpen={setOpen} />
-      <div className="actions-container">
-        <Button variant='contained' className='btn-edit' onClick={handleClickOpen}>Editar</Button>
-      </div>
-      <div className="cuenta-perdidas-ganancias-tables-container">
-        <div className='table-container'>
-          <Table>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow
-                  key={row.name}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row" className={row.composed === true ? 'composed-item' : ''}>
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="right">{row.value}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>
+      <ActionsTable handleClickOpen={handleClickOpen}></ActionsTable>
+      <SituationTable data={rows}></SituationTable>
     </>
 
   )

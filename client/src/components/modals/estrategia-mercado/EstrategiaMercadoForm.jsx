@@ -79,7 +79,7 @@ export default function EstrategiaMercadoForm({ open, setOpen }) {
           <Stepper nonLinear activeStep={activeStep} orientation={width < 768 ? 'vertical' : 'horizontal'}>
             {steps.map((step, index) => (
               <Step className='step' key={index} onClick={handleStep(index)}>
-                <StepLabel>{step.name}</StepLabel>
+                <StepLabel sx={{marginBottom: '.75em'}}>{step.name}</StepLabel>
                 <div className="fields-container">
                   {step.fields.map((field, index) => {
                     return (

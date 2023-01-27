@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
 const user = {
-    avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png'
+    // avatar: 'httzps://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png'
 };
 
 export default function DashboardToolbar({ drawerWidth, open, handleDrawerOpen }) {

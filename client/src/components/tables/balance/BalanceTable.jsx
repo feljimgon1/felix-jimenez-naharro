@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material'
 import './BalanceTable.scss'
 import BalanceForm from '../../modals/balance/BalanceForm';
+import SituationTable from '../situacion/SituationTable';
+import ActionsTable from '../../actions/ActionsTable';
 
 const activo = [
     { name: 'Activo no corriente', value: 0, composed: true },
@@ -39,44 +40,10 @@ export default function BalanceTable() {
     return (
         <>
             <BalanceForm open={open} setOpen={setOpen} />
-            <div className="actions-container">
-                <Button variant='contained' className='btn-edit' onClick={handleClickOpen}>Editar</Button>
-            </div>
+            <ActionsTable handleClickOpen={handleClickOpen}></ActionsTable>
             <div className="balance-tables-container">
-                <div className='table-container'>
-                    <Table>
-                        <TableBody>
-                            {activo.map((row) => (
-                                <TableRow
-                                    key={row.name}
-                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                >
-                                    <TableCell component="th" scope="row" className={row.composed === true ? 'composed-item' : ''}>
-                                        {row.name}
-                                    </TableCell>
-                                    <TableCell align="right">{row.value}</TableCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </div>
-                <div className='table-container'>
-                    <Table>
-                        <TableBody>
-                            {pasivo.map((row) => (
-                                <TableRow
-                                    key={row.name}
-                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                >
-                                    <TableCell component="th" scope="row" className={row.composed === true ? 'composed-item' : ''}>
-                                        {row.name}
-                                    </TableCell>
-                                    <TableCell align="right">{row.value}</TableCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </div>
+                <SituationTable data={activo} flag={true}></SituationTable>
+                <SituationTable data={pasivo}></SituationTable>
             </div>
         </>
     )
