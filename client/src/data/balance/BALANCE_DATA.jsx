@@ -1,10 +1,4 @@
-import React from 'react'
-import './BalanceTable.scss'
-import BalanceForm from '../../modals/balance/BalanceForm';
-import SituationTable from '../situacion/SituationTable';
-import ActionsTable from '../../actions/ActionsTable';
-
-const activo = [
+const activos = [
     { name: 'Activo no corriente', value: 0, composed: true },
     { name: 'Inmovilizado inmaterial', value: 0, composed: false },
     { name: 'Inmovilizado material', value: 0, composed: false },
@@ -15,7 +9,7 @@ const activo = [
     { name: 'Otros activos líquidos', value: 0, composed: false }
 ];
 
-const pasivo = [
+const pasivos = [
     { name: 'Fondos propios', value: 0, composed: true },
     { name: 'Capital suscrito', value: 0, composed: false },
     { name: 'Otros fondos propios', value: 0, composed: false },
@@ -29,22 +23,10 @@ const pasivo = [
     { name: 'Otros pasivos líquidos', value: 0, composed: false }
 ]
 
-export default function BalanceTable() {
+// const status = 'Waiting for review'
+const statusPasivo = 'Review in progress'
+const statusActivo = 'Review finished'
 
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    return (
-        <>
-            <BalanceForm open={open} setOpen={setOpen} />
-            <ActionsTable handleClickOpen={handleClickOpen}></ActionsTable>
-            <div className="balance-tables-container">
-                <SituationTable data={activo} flag={true}></SituationTable>
-                <SituationTable data={pasivo}></SituationTable>
-            </div>
-        </>
-    )
+module.exports = {
+    activos, pasivos, statusActivo, statusPasivo
 }

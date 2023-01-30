@@ -2,11 +2,11 @@ import React from 'react'
 import './Dashboard.scss'
 import DashboardToolbar from '../../components/drawerComponent/dashboardToolbar/DashboardToolbar';
 import useWindowDimensions from '../../hooks/useWindowsDimensions';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import { styled, useTheme } from '@mui/material/styles';
 import { Box, IconButton, Drawer, CssBaseline, Divider } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const drawerWidth = 240;
 

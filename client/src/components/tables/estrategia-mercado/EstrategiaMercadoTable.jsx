@@ -2,20 +2,7 @@ import React from 'react'
 import { Button, Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material'
 import './EstrategiaMercadoTable.scss'
 import EstrategiaMercadoForm from '../../modals/estrategia-mercado/EstrategiaMercadoForm';
-
-const rows = [
-  { name: 'Objetivo de Ventas año 5', value: [0, 0, 0, 0, 0] },
-  { name: 'Ventas alcanzadas en el año 1', value: [0, 0, 0, 0, 0] },
-  { name: 'Ventas alcanzadas en el año 2', value: [0, 0, 0, 0, 0] },
-  { name: 'Ventas alcanzadas en el año 3', value: [0, 0, 0, 0, 0] },
-  { name: 'Ventas alcanzadas en el año 4', value: [0, 0, 0, 0, 0] },
-  { name: 'Ventas alcanzadas en el año 5', value: [0, 0, 0, 0, 0] },
-  { name: 'Número de empleados', value: [0, 0, 0, 0, 0] },
-  { name: 'Gasto (medio) por empleado al año', value: [0, 0, 0, 0, 0] },
-  { name: 'Crecimiento de gasto por empleado', value: [0, 0, 0, 0, 0] },
-  { name: 'Aprovisionamiento/Ventas', value: [0, 0, 0, 0, 0] },
-  { name: 'Otros gastos de explotación/Ventas', value: [0, 0, 0, 0, 0] },
-]
+import { estrategiaMercadoData as rows } from '../../../data/estrategia-mercado/ESTRATEGIA_MERCADO_DATA';
 
 export default function EstrategiaMercadoTable() {
 
