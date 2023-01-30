@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import WelcomeHeader from './components/welcome/welcomeHeader/WelcomeHeader';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
-import Dashboard from './pages/dashboard/Dashboard';
+import Drawer from './pages/drawer/Drawer';
 import Balance from './pages/tables/balance/Balance';
 import CuentaPerdidasGanancias from './pages/tables/cuenta-perdidas-ganancias/CuentaPerdidasGanancias';
 import EstrategiaMercado from './pages/tables/estrategia-mercado/EstrategiaMercado';
@@ -11,13 +11,15 @@ import PoliticaInversion from './pages/tables/politica-inversion/PoliticaInversi
 import PoliticaFinanciacion from './pages/tables/politica-financiacion/PoliticaFinanciacion';
 import EstrategiaCirculante from './pages/tables/estrategia-circulante/EstrategiaCirculante';
 import Results from './pages/tables/results/Results';
+import Dashboard from './pages/dashboard/Dashboard';
 
 const router = createBrowserRouter([
   { path: '/', element: <WelcomeHeader /> },
   { path: '/register', element: <Register /> },
   { path: '/login', element: <Login /> },
   {
-    path: '/dashboard', element: <Dashboard />, children: [
+    path: '/dashboard', element: <Drawer />, children: [
+      { path: '', element: <Dashboard />},
       { path: 'balance', element: <Balance /> },
       { path: 'cuenta-perdidas-ganancias', element: <CuentaPerdidasGanancias /> },
       { path: 'estrategia-mercado', element: <EstrategiaMercado /> },
