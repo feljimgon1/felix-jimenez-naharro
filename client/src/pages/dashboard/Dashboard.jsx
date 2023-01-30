@@ -1,15 +1,12 @@
 import React from 'react'
-import { styled, useTheme } from '@mui/material/styles';
 import './Dashboard.scss'
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
+import DashboardToolbar from '../../components/drawerComponent/dashboardToolbar/DashboardToolbar';
+import useWindowDimensions from '../../hooks/useWindowsDimensions';
+import { styled, useTheme } from '@mui/material/styles';
+import { Box, IconButton, Drawer, CssBaseline, Divider } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import DashboardToolbar from '../../components/drawerComponent/dashboardToolbar/DashboardToolbar';
 
 const drawerWidth = 240;
 
@@ -57,10 +54,12 @@ const results = [
   { name: 'Resultados', path: 'resultados' }
 ];
 
-export default function DrawerComponent() {
 
+export default function DrawerComponent() {
+  
+  const { width } = useWindowDimensions();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(width > 768 ? true : false);
 
   const handleDrawerOpen = () => {
     setOpen(true);

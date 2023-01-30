@@ -15,7 +15,7 @@ export default function SituationTable({ data, handleClickOpen, flag }) {
                             <TableCell component="th" scope="row" className={row.composed === true ? 'composed-item' : ''}>
                                 {row.name}
                             </TableCell>
-                            <TableCell sx={{fontWeight: `${row.composed === true ? '700' : ''}`}} align="right">{row.value}</TableCell>
+                            <TableCell sx={{ fontWeight: `${row.composed === true ? '700' : ''}` }} align="right">{row.value}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
