@@ -21,6 +21,8 @@ const cuentaPerdidasGanancias = [
     { name: 'Resultado del ejercicio', value: 0, composed: true },
 ];
 
+const status = 'Waiting for review'
+
 module.exports = {
-    cuentaPerdidasGanancias
+    cuentaPerdidasGanancias, status
 }

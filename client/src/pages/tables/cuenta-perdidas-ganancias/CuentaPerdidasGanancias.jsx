@@ -3,7 +3,7 @@ import ActionsTable from '../../../components/actions/ActionsTable';
 import CuentaPerdidasGananciasForm from '../../../components/modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
 import SituationTable from '../../../components/tables/situacion/SituationTable';
 import './CuentaPerdidasGanancias.scss';
-import { cuentaPerdidasGanancias as rows } from '../../../data/cuenta-perdidas-ganancias/CUENTA_PERDIDAS_GANANCIAS_DATA';
+import { cuentaPerdidasGanancias as rows, status } from '../../../data/cuenta-perdidas-ganancias/CUENTA_PERDIDAS_GANANCIAS_DATA';
 
 export default function CuentaPerdidasGanancias() {
 
@@ -19,7 +19,7 @@ export default function CuentaPerdidasGanancias() {
       <div className="cuenta-perdidas-ganancias-table">
         <CuentaPerdidasGananciasForm open={open} setOpen={setOpen} />
         <ActionsTable handleClickOpen={handleClickOpen}></ActionsTable>
-        <SituationTable data={rows}></SituationTable>
+        <SituationTable data={rows} status={status}></SituationTable>
       </div>
     </div>
   )

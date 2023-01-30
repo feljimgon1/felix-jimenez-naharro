@@ -2,7 +2,7 @@ import React from 'react'
 import { Table, TableBody, TableCell, TableRow } from '@mui/material'
 import './SituationTable.scss';
 
-export default function SituationTable({ data, handleClickOpen, flag, status }) {
+export default function SituationTable({ data, status }) {
     return (
         <div className='table-container'>
             <div id="review-status" className='review-status'>
