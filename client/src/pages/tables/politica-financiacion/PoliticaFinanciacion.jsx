@@ -1,6 +1,6 @@
 import React from 'react'
 import './PoliticaFinanciacion.scss';
-import ActionsTable from '../../../components/actions/ActionsTable';
+import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import PrevisionalTable from '../../../components/tables/previsional/PrevisionalTable';
 import PoliticaFinanciacionForm from '../../../components/modals/politica-financiacion/PoliticaFinanciacionForm';
 import { politicaFinanciacionData as rows, status } from '../../../data/politica-financiacion/POLITICA_FINANCIACION_DATA';

@@ -2,7 +2,7 @@ import React from 'react'
 import './Balance.scss'
 import BalanceForm from '../../../components/modals/balance/BalanceForm';
 import SituationTable from '../../../components/tables/situacion/SituationTable';
-import ActionsTable from '../../../components/actions/ActionsTable';
+import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import { activos, pasivos, statusActivo, statusPasivo } from '../../../data/balance/BALANCE_DATA';
 
 export default function Balance() {
