@@ -12,6 +12,7 @@ import PoliticaFinanciacion from './pages/tables/politica-financiacion/PoliticaF
 import EstrategiaCirculante from './pages/tables/estrategia-circulante/EstrategiaCirculante';
 import Results from './pages/tables/results/Results';
 import Dashboard from './pages/dashboard/Dashboard';
+import Profile from './pages/profile/Profile';
 
 const router = createBrowserRouter([
   { path: '/', element: <WelcomeHeader /> },
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
       { path: 'politica-inversion', element: <PoliticaInversion /> },
       { path: 'politica-financiacion', element: <PoliticaFinanciacion /> },
       { path: 'estrategia-circulante', element: <EstrategiaCirculante /> },
-      { path: 'resultados', element: <Results /> }
+      { path: 'resultados', element: <Results /> },
+      { path: 'profile', element: <Profile /> },
     ]
   },
 ]);

@@ -1,5 +1,5 @@
 import React from 'react';
-import ActionsTable from '../../../components/actions/ActionsTable';
+import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import CuentaPerdidasGananciasForm from '../../../components/modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
 import SituationTable from '../../../components/tables/situacion/SituationTable';
 import './CuentaPerdidasGanancias.scss';

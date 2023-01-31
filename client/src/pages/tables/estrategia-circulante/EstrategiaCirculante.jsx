@@ -1,7 +1,7 @@
 import React from 'react';
 import './EstrategiaCirculante.scss';
 import EstrategiaCirculanteForm from '../../../components/modals/estrategia-circulante/EstrategiaCirculanteForm';
-import ActionsTable from '../../../components/actions/ActionsTable';
+import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import PrevisionalTable from '../../../components/tables/previsional/PrevisionalTable';
 import { estrategiaCirculanteData as rows, status } from '../../../data/estrategia-circulante/ESTRATEGIA_CIRCULANTE_DATA';
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import './EstrategiaMercado.scss'
 import EstrategiaMercadoForm from '../../../components/modals/estrategia-mercado/EstrategiaMercadoForm'
-import ActionsTable from '../../../components/actions/ActionsTable';
+import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import PrevisionalTable from '../../../components/tables/previsional/PrevisionalTable';
 import { estrategiaMercadoData as rows, status } from '../../../data/estrategia-mercado/ESTRATEGIA_MERCADO_DATA';
 

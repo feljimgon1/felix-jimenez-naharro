@@ -1,6 +1,6 @@
 import React from 'react'
 import './PoliticaInversion.scss'
-import ActionsTable from '../../../components/actions/ActionsTable';
+import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import PrevisionalTable from '../../../components/tables/previsional/PrevisionalTable';
 import { politicaInversionData as rows, status } from '../../../data/politica-inversion/POLITICA_INVERSION_DATA';
 import PoliticaInversionForm from '../../../components/modals/politica-inversion/PoliticaInversionForm';
