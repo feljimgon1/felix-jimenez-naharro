@@ -3,7 +3,7 @@ import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import CuentaPerdidasGananciasForm from '../../../components/modals/cuenta-perdidas-ganancias/CuentaPerdidasGananciasForm';
 import SituationTable from '../../../components/tables/situacion/SituationTable';
 import './CuentaPerdidasGanancias.scss';
-import { cuentaPerdidasGanancias as rows, status } from '../../../data/cuenta-perdidas-ganancias/CUENTA_PERDIDAS_GANANCIAS_DATA';
+import { cuentaPerdidasGananciasData as rows, status } from '../../../data/cuenta-perdidas-ganancias/CUENTA_PERDIDAS_GANANCIAS_DATA';
 
 export default function CuentaPerdidasGanancias() {
 
