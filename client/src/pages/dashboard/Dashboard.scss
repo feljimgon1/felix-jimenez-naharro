@@ -1,4 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 .dashboard-container {
   display: flex;
   flex-direction: column;
+
+  .title {
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .situation-container {
+    .chart-container {
+      margin: 2em auto;
+      width: 50vw;
+
+    }
+  }
+
+  .previsional-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    .chart-container {
+      width: 90vw;
+    }
+  }
+
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2em;
+  padding-bottom: 3em;
+}
+
+@media(min-width: 768px) {
+  .previsional-container {
+    .chart-container {
+      width: 40vw !important;
+    }
+  }
 }
