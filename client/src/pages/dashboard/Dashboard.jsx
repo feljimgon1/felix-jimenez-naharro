@@ -1,8 +1,9 @@
 import React from 'react';
 import './Dashboard.scss'
 import { BalanceChart } from '../../components/charts/balance/BalanceChart';
-import { CuentaPerdidasGananciasChart } from '../../components/charts/cuenta-perdidas-ganancias/CuentaPerdidasGananciasChart';
+// import { CuentaPerdidasGananciasChart } from '../../components/charts/cuenta-perdidas-ganancias/CuentaPerdidasGananciasChart';
 import { EstrategiaMercadoChart } from '../../components/charts/estrategia-mercado/EstrategiaMercadoChart';
+import { PoliticaInversionChart } from '../../components/charts/politica-inversion/PoliticaInversionChart';
 
 export default function Dashboard() {
   return (
@@ -20,25 +21,13 @@ export default function Dashboard() {
         <div className="chart-container">
           <div className="chart-title">Estrategia de mercado</div>
           <div className="chart">
-            <EstrategiaMercadoChart />
+          <EstrategiaMercadoChart />
           </div>
         </div>
         <div className="chart-container">
           <div className="chart-title">Balance</div>
           <div className="chart">
-            <BalanceChart />
-          </div>
-        </div>
-        <div className="chart-container">
-          <div className="chart-title">Balance</div>
-          <div className="chart">
-            <BalanceChart />
-          </div>
-        </div>
-        <div className="chart-container">
-          <div className="chart-title">Balance</div>
-          <div className="chart">
-            <BalanceChart />
+          <PoliticaInversionChart />
           </div>
         </div>
       </div>

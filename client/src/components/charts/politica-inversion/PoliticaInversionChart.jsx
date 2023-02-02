@@ -15,19 +15,19 @@ const data = {
             label: "First dataset",
             data: [33, 53, 85, 41, 44, 65],
             fill: true,
-            backgroundColor: "rgba(75,192,192,0.2)",
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
             borderColor: "rgba(75,192,192,1)"
         },
         {
             label: "Second dataset",
             data: [33, 25, 35, 51, 54, 76],
             fill: true,
-            backgroundColor: "#742774",
-            borderColor: "#742774"
+            backgroundColor: "rgba(255, 159, 64, 0.2)",
+            borderColor: "rgba(255, 159, 64, 1)"
         }
     ]
 };
 
-export const EstrategiaMercadoChart = () => {
+export const PoliticaInversionChart = () => {
     return <Line height={200} data={data} options={options} />
 };

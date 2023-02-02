@@ -12,7 +12,6 @@
   .situation-container {
     .chart-container {
       margin: 2em auto;
-      width: 50vw;
 
     }
   }
@@ -21,22 +20,19 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 2em;
 
-    .chart-container {
-      width: 90vw;
-    }
   }
-
+  
 }
 
 .chart-title {
   font-size: 1.5rem;
   letter-spacing: 1px;
-
+  
 }
 
 .chart-container {
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -46,9 +42,7 @@
 }
 
 @media(min-width: 768px) {
-  .previsional-container {
-    .chart-container {
-      width: 40vw !important;
-    }
+  .chart-container {
+    width: 35vw !important;
   }
 }
