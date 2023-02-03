@@ -21,14 +21,16 @@ export default function Dashboard() {
         <div className="chart-container">
           <div className="chart-title">Estrategia de mercado</div>
           <div className="chart">
-          <EstrategiaMercadoChart />
+            <EstrategiaMercadoChart />
           </div>
+          <div></div>
         </div>
         <div className="chart-container">
           <div className="chart-title">Política de inversión</div>
           <div className="chart">
-          <PoliticaInversionChart />
+            <PoliticaInversionChart />
           </div>
+          <div></div>
         </div>
       </div>
     </div>

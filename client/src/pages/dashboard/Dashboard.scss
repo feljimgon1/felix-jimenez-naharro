@@ -12,6 +12,7 @@
   .situation-container {
     display: flex;
     justify-content: center;
+
     .chart-container {
       margin: 2em auto;
     }
@@ -20,29 +21,37 @@
   .previsional-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
 
     flex-wrap: wrap;
     gap: 2em;
 
+    .chart-container {
+      align-items: center;
+    }
+
   }
-  
+
 }
 
 .chart-title {
   font-size: 1.5rem;
   letter-spacing: 1px;
-  
+
 }
 
 .chart-container {
   width: 90vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 2em;
   padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .chart-title {
+    margin-bottom: .5em;
+    width: 100%;
+  }
 }
 
 @media(min-width: 768px) {

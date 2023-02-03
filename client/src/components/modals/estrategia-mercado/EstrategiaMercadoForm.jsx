@@ -10,7 +10,6 @@ const steps = [
   {
     name: 'Objetivo de ventas',
     fields: [
-      'Total esperado en 5 años (€)',
       'Año 1',
       'Año 2',
       'Año 3',
@@ -57,6 +56,13 @@ const steps = [
   },
 ];
 
+const preventNegative = (e) => {
+  console.log(e)
+  if (e.code === 'NumpadSubtract' || e.code === 'ArrowDown' || e.code === 'KeyE' || e.code === '+') {
+      e.preventDefault();
+  }
+};
+
 export default function EstrategiaMercadoForm({ open, setOpen }) {
 
   const [activeStep, setActiveStep] = React.useState(0);
@@ -70,8 +76,6 @@ export default function EstrategiaMercadoForm({ open, setOpen }) {
     setOpen(false);
   };
 
-  console.log(width)
-
   return (
     <Dialog open={open} onClose={handleClose} className='estrategia-mercado-form-container'>
       <DialogContent className='estrategia-mercado-dialog-content'>
@@ -83,7 +87,16 @@ export default function EstrategiaMercadoForm({ open, setOpen }) {
                 <div className="fields-container">
                   {step.fields.map((field, index) => {
                     return (
-                      <TextField className='field' key={index} type="number" id="filled-basic" label={field} variant="filled" onWheel={(e) => e.target.blur()}/>
+                      <TextField 
+                      className='field' 
+                      key={index} 
+                      type="number"
+                      id="filled-basic"
+                      label={field}
+                      variant="filled"
+                      onKeyPress={preventNegative}
+                      onKeyDown={preventNegative}
+                      onWheel={(e) => e.target.blur()}/>
                     )
                   })}
                 </div>
