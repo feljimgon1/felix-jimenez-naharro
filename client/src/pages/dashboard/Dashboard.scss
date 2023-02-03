@@ -10,15 +10,18 @@
   }
 
   .situation-container {
+    display: flex;
+    justify-content: center;
     .chart-container {
       margin: 2em auto;
-
     }
   }
 
   .previsional-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
     flex-wrap: wrap;
     gap: 2em;
 

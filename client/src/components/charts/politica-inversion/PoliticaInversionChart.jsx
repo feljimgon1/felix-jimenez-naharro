@@ -5,15 +5,15 @@ import { Line } from "react-chartjs-2";
 ChartJS.register()
 
 const options = {
-    maintainAspectRatio: false
+    maintainAspectRatio: true
 }
 
 const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    labels: ["Año 1", "Año 2", "Año 3", "Año 4", "Año 5"],
     datasets: [
         {
             label: "First dataset",
-            data: [33, 53, 85, 41, 44, 65],
+            data: [33, 53, 1000, 41, 44, 65],
             fill: true,
             backgroundColor: "rgba(75, 192, 192, 0.2)",
             borderColor: "rgba(75,192,192,1)"
@@ -29,5 +29,5 @@ const data = {
 };
 
 export const PoliticaInversionChart = () => {
-    return <Line height={200} data={data} options={options} />
+    return <Line height={250}  data={data} options={options} />
 };

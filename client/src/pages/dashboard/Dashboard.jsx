@@ -25,7 +25,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="chart-container">
-          <div className="chart-title">Balance</div>
+          <div className="chart-title">Política de inversión</div>
           <div className="chart">
           <PoliticaInversionChart />
           </div>

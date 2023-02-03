@@ -2,32 +2,43 @@ import React from "react";
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Line } from "react-chartjs-2";
 
+import { estrategiaMercadoData } from '../../../data/estrategia-mercado/ESTRATEGIA_MERCADO_DATA';
+
 ChartJS.register()
 
 const options = {
     maintainAspectRatio: false
 }
 
+const ventasValues = getVentas(estrategiaMercadoData);
+
+function getVentas(l) {
+    let ventas = l.filter(data=>data.name==='Objetivo de Ventas año 5');
+    return ventas[0].value.map((data, index)=>{
+        return ventas[0].value[4]
+    })
+}
+
 const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    labels: ["Año 1", "Año 2", "Año 3", "Año 4", "Año 5"],
     datasets: [
         {
-            label: "First dataset",
-            data: [33, 53, 85, 41, 44, 65],
+            label: "Ventas",
+            data: [33, 53, 85, 41, 44],
             fill: true,
             backgroundColor: "rgba(75,192,192,0.2)",
             borderColor: "rgba(75,192,192,1)"
         },
         {
-            label: "Second dataset",
-            data: [33, 25, 35, 51, 54, 76],
+            label: "Costes",
+            data: [33, 25, 35, 51, 54],
             fill: true,
-            backgroundColor: "#742774",
-            borderColor: "#742774"
+            backgroundColor: "rgba(255, 99, 132, 0.2)",
+            borderColor: "rgba(255, 99, 132, 1)"
         }
     ]
 };
 
 export const EstrategiaMercadoChart = () => {
-    return <Line height={200} data={data} options={options} />
+    return <Line height={250} data={data} options={options} />
 };
