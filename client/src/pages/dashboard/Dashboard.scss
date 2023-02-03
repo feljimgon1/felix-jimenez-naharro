@@ -10,9 +10,10 @@
   }
 
   .situation-container {
+    display: flex;
+    justify-content: center;
     .chart-container {
       margin: 2em auto;
-
     }
   }
 

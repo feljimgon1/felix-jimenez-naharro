@@ -5,7 +5,7 @@ import { Line } from "react-chartjs-2";
 ChartJS.register()
 
 const options = {
-    maintainAspectRatio: false
+    maintainAspectRatio: true
 }
 
 const data = {
