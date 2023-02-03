@@ -4,19 +4,30 @@ import { Line } from "react-chartjs-2";
 
 import { estrategiaMercadoData } from '../../../data/estrategia-mercado/ESTRATEGIA_MERCADO_DATA';
 
-ChartJS.register()
+ChartJS.register();
+
+
+const values = getValues(estrategiaMercadoData);
+
+function getValues(list) {
+
+    var ventasData = list
+        .filter(item => item.name === "Ventas alcanzadas por año" ? item.value : null)[0].value;
+    var costesEmpleado = list
+        .filter(item => item.name === "Crecimiento de gasto por empleado" ? item.value : null)[0].value;
+    var costesAprovisionamiento = list
+        .filter(item => item.name === "Aprovisionamiento/Ventas" ? item.value : null)[0].value;
+    var costesOtrosGastos = list
+        .filter(item => item.name === "Otros gastos de explotación/Ventas" ? item.value : null)[0].value;
+
+    var costesAux = [costesEmpleado, costesAprovisionamiento, costesOtrosGastos]
+    var costesData = costesAux[0].map((x, idx) => costesAux.reduce((sum, curr) => sum + curr[idx], 0));;
+    
+    return [ventasData, costesData];
+}
 
 const options = {
     maintainAspectRatio: false
-}
-
-const ventasValues = getVentas(estrategiaMercadoData);
-
-function getVentas(l) {
-    let ventas = l.filter(data=>data.name==='Objetivo de Ventas año 5');
-    return ventas[0].value.map((data, index)=>{
-        return ventas[0].value[4]
-    })
 }
 
 const data = {
@@ -24,14 +35,14 @@ const data = {
     datasets: [
         {
             label: "Ventas",
-            data: [33, 53, 85, 41, 44],
+            data: values[0],
             fill: true,
             backgroundColor: "rgba(75,192,192,0.2)",
             borderColor: "rgba(75,192,192,1)"
         },
         {
             label: "Costes",
-            data: [33, 25, 35, 51, 54],
+            data: values[1],
             fill: true,
             backgroundColor: "rgba(255, 99, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)"
