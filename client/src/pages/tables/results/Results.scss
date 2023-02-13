@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.results-container {
+  .accordion-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: 'Kanit', sans-serif;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  .result-table {
+    padding: 5em !important;
+  }
+}
+
+@media(min-width: 768px) {
+  .results-container {
+    width: 70vw;
+  }
+}

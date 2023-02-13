@@ -13,7 +13,6 @@ export default function PoliticaFinanciacion() {
     setOpen(true);
   };
 
-
   return (
     <div className='politica-financiacion-container'>
       <div className="politica-financiacion-title">Política de financiación</div>
