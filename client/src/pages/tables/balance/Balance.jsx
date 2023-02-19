@@ -4,6 +4,7 @@ import BalanceForm from '../../../components/modals/balance/BalanceForm';
 import SituationTable from '../../../components/tables/situacion/SituationTable';
 import ActionsTable from '../../../components/actions/tables/ActionsTable';
 import { activos, pasivos, statusActivo, statusPasivo } from '../../../data/balance/BALANCE_DATA';
+import { BsFillExclamationTriangleFill } from 'react-icons/bs';
 
 export default function Balance() {
 
@@ -15,7 +16,9 @@ export default function Balance() {
 
   return (
     <div className='balance-container'>
-      <div className="balance-title">Balance</div>
+      <div className='table-title'>
+        <div className="balance-title">Balance</div><div className='warning-icon'><BsFillExclamationTriangleFill />¡Error en la tabla! Compruebe los valores introducidos<BsFillExclamationTriangleFill /></div>
+      </div>
       <div className="balance-table">
         <BalanceForm open={open} setOpen={setOpen} />
         <ActionsTable handleClickOpen={handleClickOpen}></ActionsTable>

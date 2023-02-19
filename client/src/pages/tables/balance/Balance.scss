@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 .balance-container {
+
+  .table-title {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    .warning-icon {
+      padding: .5em;
+      border-radius: 5px;
+      color: #721c24;
+      background-color: #f8d7da;
+      height: fit-content !important;
+      width: fit-content !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > * {
+        margin: .5em;
+      }
+    }
+  }
+
   .balance-title {
     font-weight: 600;
     text-transform: uppercase;
