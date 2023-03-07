@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 .balance-container {
 
   .table-title {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 1em;
+
     .warning-icon {
+      margin: 0 auto;
       padding: .5em;
       border-radius: 5px;
       color: #721c24;
@@ -15,7 +19,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      > * {
+
+      >* {
         margin: .5em;
       }
     }
@@ -25,7 +30,8 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 2rem;
-    font-family: 'Kanit', sans-serif;  }
+    font-family: 'Kanit', sans-serif;
+  }
 
   .balance-table {
     margin-left: 0 !important;

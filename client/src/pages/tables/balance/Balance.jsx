@@ -17,7 +17,10 @@ export default function Balance() {
   return (
     <div className='balance-container'>
       <div className='table-title'>
-        <div className="balance-title">Balance</div><div className='warning-icon'><BsFillExclamationTriangleFill />¡Error en la tabla! Compruebe los valores introducidos<BsFillExclamationTriangleFill /></div>
+        <div className="balance-title">Balance</div>
+        <div className='warning-icon'>
+          <BsFillExclamationTriangleFill />¡Error en la tabla! Compruebe los valores introducidos<BsFillExclamationTriangleFill />
+        </div>
       </div>
       <div className="balance-table">
         <BalanceForm open={open} setOpen={setOpen} />
