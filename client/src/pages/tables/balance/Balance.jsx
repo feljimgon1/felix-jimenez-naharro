@@ -14,13 +14,21 @@ export default function Balance() {
     setOpen(true);
   };
 
+  const balanceError = (BALANCE_DATA) => {
+    let sumActivos;
+    let sumPasivos;
+    return sumActivos !== sumPasivos;
+  }
+
   return (
     <div className='balance-container'>
       <div className='table-title'>
         <div className="balance-title">Balance</div>
-        <div className='warning-icon'>
-          <BsFillExclamationTriangleFill />¡Error en la tabla! Compruebe los valores introducidos<BsFillExclamationTriangleFill />
-        </div>
+        {balanceError ? (
+          <div className='warning-icon'>
+            <BsFillExclamationTriangleFill />¡Error en la tabla! Compruebe los valores introducidos<BsFillExclamationTriangleFill />
+          </div>
+        ) : null}
       </div>
       <div className="balance-table">
         <BalanceForm open={open} setOpen={setOpen} />

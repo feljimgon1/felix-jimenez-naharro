@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Results.scss'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -11,6 +11,8 @@ import { FaRegFilePdf } from "react-icons/fa";
 import { FaRegFileExcel } from "react-icons/fa";
 
 export default function Results() {
+
+  const [count, setCount] = useState(0);
 
   return (
     <div className='results-container'>

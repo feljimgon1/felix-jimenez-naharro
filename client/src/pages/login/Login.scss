@@ -20,6 +20,12 @@
       flex-direction: column;
       gap: 1em;
       padding: 2em;
+      padding-bottom: 1em;
+    }
+
+    .google-login-container {
+      width: fit-content;
+      margin: 0 auto;
     }
   }
 }

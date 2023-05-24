@@ -13,6 +13,7 @@ import EstrategiaCirculante from './pages/tables/estrategia-circulante/Estrategi
 import Results from './pages/tables/results/Results';
 import Dashboard from './pages/dashboard/Dashboard';
 import Profile from './pages/profile/Profile';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const router = createBrowserRouter([
   { path: '/', element: <WelcomeHeader /> },
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   { path: '/login', element: <Login /> },
   {
     path: '/dashboard', element: <Drawer />, children: [
-      { path: '', element: <Dashboard />},
+      { path: '', element: <Dashboard /> },
       { path: 'balance', element: <Balance /> },
       { path: 'cuenta-perdidas-ganancias', element: <CuentaPerdidasGanancias /> },
       { path: 'estrategia-mercado', element: <EstrategiaMercado /> },
@@ -35,7 +36,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <GoogleOAuthProvider>
+      <RouterProvider router={router} />
+    </GoogleOAuthProvider>
   );
 }
 
