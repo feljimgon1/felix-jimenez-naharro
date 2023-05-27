@@ -20,7 +20,7 @@ export default function Profile() {
       <div className="profile-main-title">Mi perfil</div>
       <div className="section-container">
         <div className="profile-user-container">
-          <ActionsProfile />
+          <ActionsProfile edit={true} delete={true}/>
           <div className="profile-card-title">
             Información de usuario
           </div>
@@ -35,7 +35,7 @@ export default function Profile() {
         </div>
 
         <div className="profile-company-container">
-          <ActionsProfile />
+          <ActionsProfile edit={true} delete={false} />
           <div className="profile-card-title">
             Información de la compañía
           </div>
