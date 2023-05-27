@@ -8,16 +8,6 @@ export default function Login() {
 
 	}
 
-	const clientId = '102596810967-934ndsgh11uqf73lh1al9vlpl7lqlke9.apps.googleusercontent.com'
-
-	const onSuccess = (res) => {
-		console.log('success!', res);
-	}
-
-	const onFailure = (res) => {
-		console.log('failure!', res);
-	}
-
 	return (
 		<div className='login-container'>
 			<div className='form-card'>
