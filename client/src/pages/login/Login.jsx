@@ -1,7 +1,6 @@
 import { Button, TextField } from '@mui/material'
 import React from 'react'
 import './Login.scss'
-import { GoogleLogin } from '@react-oauth/google'
 
 export default function Login() {
 
@@ -38,17 +37,7 @@ export default function Login() {
 						type="password" />
 					<Button className='btn centered' variant="contained">Iniciar sesión</Button>
 				</form>
-				<div className="google-login-container">
-					<GoogleLogin
-						shape='circle'
-						// type='icon'
-						clientId={clientId}
-						onSuccess={onSuccess}
-						onFailure={onFailure}
-						cookiePolicy={'single-host-origin'}
-						isSignedIn={true}
-					/>
-				</div>
+				<div className="google-login-container">Login</div>
 			</div>
 		</div>
 	)
