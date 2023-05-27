@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Results.scss'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
