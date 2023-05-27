@@ -2,7 +2,6 @@ import { Button, TextField } from '@mui/material'
 import React from 'react'
 import './Login.scss'
 import { GoogleLogin } from '@react-oauth/google'
-import useWindowDimensions from '../../hooks/useWindowsDimensions'
 
 export default function Login() {
 
