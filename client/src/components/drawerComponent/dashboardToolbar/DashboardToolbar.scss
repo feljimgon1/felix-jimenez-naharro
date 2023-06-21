@@ -1,0 +1,40 @@
+.dashboard-toolbar-container {
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-menu {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-socials {
+      padding: .5em;
+
+      .user-avatar {
+        height: 3em;
+        width: 3em;
+        border-radius: 50%;
+        padding: .75em;
+        transition: 300ms all;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .user-avatar {
+    padding: 0.1em !important;
+    width: 2em !important;
+    height: 2em !important;
+  }
+}

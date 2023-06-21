@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.balance-container {
+
+  .table-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+    .warning-icon {
+      margin: 0 auto;
+      padding: .5em;
+      border-radius: 5px;
+      color: #721c24;
+      background-color: #f8d7da;
+      height: fit-content !important;
+      width: fit-content !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      >* {
+        margin: .5em;
+      }
+    }
+  }
+
+  .balance-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .balance-table {
+    margin-left: 0 !important;
+
+    .balance-tables-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      margin-top: 1em;
+
+    }
+
+    @media(min-width: 768px) {
+      .balance-tables-container {
+        flex-direction: row;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,17 @@
+.estrategia-mercado-form-container {  
+  .MuiDialog-paper{
+    width: 100vw;
+    .fields-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1em;
+      justify-items: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .estrategia-mercado-dialog-content {
+    width: 100vw;
+  }
+}
