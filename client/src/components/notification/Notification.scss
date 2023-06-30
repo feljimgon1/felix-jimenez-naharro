@@ -1,0 +1,14 @@
+.notification-container {
+	padding: .7em;
+	border-radius: 5px;
+	width: fit-content;
+}
+
+.success {
+	color: #577758;
+	background-color: #edf7ed;
+}
+.error {
+	color: red;
+	background-color: blue;
+}
