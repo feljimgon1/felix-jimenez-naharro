@@ -15,8 +15,8 @@ const cuentaPerdidasGananciasData = [
     { name: 'Resultado ordinarios antes de impuestos', value: 0, composed: true },
     { name: 'Impuesto sobre sociedades', value: 6425, composed: false },
     { name: 'Resultado actividades ordinarias', value: 19275, composed: true },
-    { name: 'Ingresos ordinarios', value: 0, composed: false },
-    { name: 'Gastos ordinarios', value: 0, composed: false },
+    { name: 'Ingresos extraordinarios', value: 0, composed: false },
+    { name: 'Gastos extraordinarios', value: 0, composed: false },
     { name: 'Resultado actividades extraordinarias', value: 0, composed: true },
     { name: 'Resultado del ejercicio', value: 19275, composed: true },
 ];

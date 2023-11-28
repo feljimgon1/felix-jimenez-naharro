@@ -15,7 +15,6 @@ export default function Balance() {
   const dispatch = useDispatch()
 
   const [open, setOpen] = React.useState(false)
-  // TODO: Use isFetchPending for loading skeleton in table
   const [isFetchPending, setIsFetchPending] = React.useState(true);
 
   const handleClickOpen = () => {
@@ -83,7 +82,7 @@ export default function Balance() {
             currentSumaPasivos !== currentSumaActivos ?
               <>
                 <BsFillExclamationTriangleFill onClose={() => { }} />
-                ¡Error en la tabla! Compruebe los valores introducidos
+                ¡Error en la tabla! El pasivo debe ser igual al activo
                 <BsFillExclamationTriangleFill />
               </> : undefined
           }
