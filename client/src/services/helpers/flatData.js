@@ -203,7 +203,7 @@ export function flatCuentaPerdidasGanancias(cuentaPerdidasGanancias) {
       res[8].value = res[0].value - res[4].value
       res[10].value = res[8].value - res[9].value
       res[13].value = res[11].value - res[12].value
-      res[14].value = res[10].value - res[13].value
+      res[14].value = res[10].value + res[13].value
       res[16].value = res[14].value - res[15].value
       res[19].value = res[17].value - res[18].value
       res[20].value = res[19].value + res[16].value

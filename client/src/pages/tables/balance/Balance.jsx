@@ -3,6 +3,8 @@ import './Balance.scss'
 import BalanceForm from '../../../components/modals/balance/BalanceForm';
 import SituationTable from '../../../components/tables/situacion/SituationTable';
 import ActionsTable from '../../../components/actions/tables/ActionsTable';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 import { BsFillExclamationTriangleFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
@@ -29,6 +31,10 @@ export default function Balance() {
 
   const [currentActivos, setCurrentActivos] = useState(activosData)
   const [currentPasivos, setCurrentPasivos] = useState(pasivosData)
+
+  const [openSnackbar, setOpenSnackBar] = React.useState(false)
+  const [snackBarMessage, setSnackBarMessage] = React.useState(false)
+  const [snackBarSeverity, setSnackBarSeverity] = React.useState(undefined)
 
   const populateBalance = useCallback(async () => {
     let fetchedBalance = await fetchBalance()
@@ -73,19 +79,28 @@ export default function Balance() {
     setCurrentSumaPasivos(sumaPasivos)
   }, [sumaActivos, sumaPasivos])
 
+  const handleOpenSnackBar = (message, success) => {
+    success ? setSnackBarSeverity('success') : setSnackBarSeverity('error')
+    setSnackBarMessage(message)
+    setOpenSnackBar(!openSnackbar)
+  }
+
   return (
     <div className='balance-container'>
+      <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={() => setOpenSnackBar(false)}>
+        <Alert onClose={() => setOpenSnackBar(false)} severity={snackBarSeverity} variant='filled' sx={{ width: '100%' }}>
+          {snackBarMessage}
+        </Alert>
+      </Snackbar>
       <div className='table-title'>
         <div className="balance-title">Balance</div>
         <div className={`${currentSumaPasivos !== currentSumaActivos ? 'warning-icon' : ''}`}>
-          {
-            currentSumaPasivos !== currentSumaActivos ?
-              <>
-                <BsFillExclamationTriangleFill onClose={() => { }} />
-                ¡Error en la tabla! El pasivo debe ser igual al activo
-                <BsFillExclamationTriangleFill />
-              </> : undefined
-          }
+          {currentSumaPasivos !== currentSumaActivos ?
+            <>
+              <BsFillExclamationTriangleFill onClose={() => { }} />
+              ¡Error en la tabla! El pasivo debe ser igual al activo
+              <BsFillExclamationTriangleFill />
+            </> : undefined}
         </div>
       </div>
       <div className="balance-table">
@@ -93,7 +108,8 @@ export default function Balance() {
           open={open}
           setOpen={setOpen}
           activos={currentActivos}
-          pasivos={currentPasivos} />
+          pasivos={currentPasivos} 
+          handleOpenSnackBar={handleOpenSnackBar} />
         <ActionsTable handleClickOpen={handleClickOpen}></ActionsTable>
         <div className="balance-tables-container">
           <SituationTable isFetchPending={isFetchPending} data={activosData} flag={true} status={activosStatus}></SituationTable>

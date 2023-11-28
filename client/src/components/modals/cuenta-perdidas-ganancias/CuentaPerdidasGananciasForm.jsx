@@ -104,7 +104,7 @@ export default function CuentaPerdidasGananciasForm({ open, setOpen, cuentaPerdi
   const updateResultadoOrdinarioAntesDeImpuestos = (newArr) => {
     return newArr[14] = {
       ...newArr[14],
-      value: parseInt(newArr[10].value) - parseInt(newArr[13].value)
+      value: parseInt(newArr[10].value) + parseInt(newArr[13].value)
     }
   }
 

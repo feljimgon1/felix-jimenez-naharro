@@ -6,7 +6,7 @@ import { setActivosData, setPasivosData } from '../../../redux/slices/balanceSli
 import { useDispatch } from 'react-redux';
 import { updateBalance } from '../../../services/balance/balance.api';
 
-export default function BalanceForm({ open, setOpen, activos, pasivos }) {
+export default function BalanceForm({ open, setOpen, activos, pasivos, handleOpenSnackBar }) {
 
   const dispatch = useDispatch()
 
@@ -163,9 +163,11 @@ export default function BalanceForm({ open, setOpen, activos, pasivos }) {
     event.preventDefault()
 
     // API call
-    await updateBalance(currentActivos, currentPasivos, updatedActivos, updatedPasivos)
-
+    const res = await updateBalance(currentActivos, currentPasivos, updatedActivos, updatedPasivos)
+    
     // Update FE depending on response
+    console.log(res.message, res.success);
+    handleOpenSnackBar(res.message, res.success)
     dispatch(setActivosData(currentActivos))
     dispatch(setPasivosData(currentPasivos))
     handleClose()
