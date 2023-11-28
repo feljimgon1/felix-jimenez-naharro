@@ -58,8 +58,9 @@ const results = [
 export default function DrawerComponent() {
   
   const { width } = useWindowDimensions();
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(width > 768 ? true : false);
+  const theme = useTheme()
+  // TODO: For testing purposes added < instead of >. Change when finished
+  const [open, setOpen] = React.useState(width < 768 ? true : false);
 
   const handleDrawerOpen = () => {
     setOpen(true);

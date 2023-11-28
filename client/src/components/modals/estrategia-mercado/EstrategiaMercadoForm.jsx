@@ -57,9 +57,11 @@ const steps = [
 ];
 
 const preventNegative = (e) => {
-  console.log(e)
-  if (e.code === 'NumpadSubtract' || e.code === 'ArrowDown' || e.code === 'KeyE' || e.code === '+') {
-      e.preventDefault();
+  if (e.code === 'NumpadSubtract' ||
+    e.code === 'ArrowDown' ||
+    e.code === 'KeyE' ||
+    e.code === '+') {
+    e.preventDefault();
   }
 };
 
@@ -83,20 +85,20 @@ export default function EstrategiaMercadoForm({ open, setOpen }) {
           <Stepper nonLinear activeStep={activeStep} orientation={width < 768 ? 'vertical' : 'horizontal'}>
             {steps.map((step, index) => (
               <Step className='step' key={index} onClick={handleStep(index)}>
-                <StepLabel sx={{marginBottom: '.75em'}}>{step.name}</StepLabel>
+                <StepLabel sx={{ marginBottom: '.75em' }}>{step.name}</StepLabel>
                 <div className="fields-container">
                   {step.fields.map((field, index) => {
                     return (
-                      <TextField 
-                      className='field' 
-                      key={index} 
-                      type="number"
-                      id="filled-basic"
-                      label={field}
-                      variant="filled"
-                      onKeyPress={preventNegative}
-                      onKeyDown={preventNegative}
-                      onWheel={(e) => e.target.blur()}/>
+                      <TextField
+                        className='field'
+                        key={index}
+                        type="number"
+                        id="filled-basic"
+                        label={field}
+                        variant="filled"
+                        onKeyPress={preventNegative}
+                        onKeyDown={preventNegative}
+                        onWheel={(e) => e.target.blur()} />
                     )
                   })}
                 </div>
@@ -105,9 +107,9 @@ export default function EstrategiaMercadoForm({ open, setOpen }) {
           </Stepper>
         </form>
       </DialogContent>
-      <DialogActions sx={{display: 'flex', justifyContent: 'flex-end'}}>
-        <Button variant='contained' className='btn-contained' onClick={handleClose}>Cancelar</Button>
-        <Button variant='contained' className='btn-contained' onClick={handleClose}>Guardar</Button>
+      <DialogActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <Button variant='contained' className='btn btn-contained' onClick={handleClose}>Cancelar</Button>
+        <Button variant='contained' className='btn btn-contained' onClick={handleClose}>Guardar</Button>
       </DialogActions>
     </Dialog >
   )

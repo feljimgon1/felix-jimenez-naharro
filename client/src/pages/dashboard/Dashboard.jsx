@@ -1,7 +1,6 @@
 import React from 'react';
 import './Dashboard.scss'
 import { BalanceChart } from '../../components/charts/balance/BalanceChart';
-// import { CuentaPerdidasGananciasChart } from '../../components/charts/cuenta-perdidas-ganancias/CuentaPerdidasGananciasChart';
 import { EstrategiaMercadoChart } from '../../components/charts/estrategia-mercado/EstrategiaMercadoChart';
 import { PoliticaInversionChart } from '../../components/charts/politica-inversion/PoliticaInversionChart';
 
@@ -30,7 +29,6 @@ export default function Dashboard() {
           <div className="chart">
             <PoliticaInversionChart />
           </div>
-          <div></div>
         </div>
       </div>
     </div>

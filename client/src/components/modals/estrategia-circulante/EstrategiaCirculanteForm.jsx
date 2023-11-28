@@ -72,8 +72,8 @@ export default function EstrategiaCirculanteForm({ open, setOpen }) {
                 </form>
             </DialogContent>
             <DialogActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button variant='contained' className='btn-contained' onClick={handleClose}>Cancelar</Button>
-                <Button variant='contained' className='btn-contained' onClick={handleClose}>Guardar</Button>
+                <Button variant='contained' className='btn btn-contained' onClick={handleClose}>Cancelar</Button>
+                <Button variant='contained' className='btn btn-contained' onClick={handleClose}>Guardar</Button>
             </DialogActions>
         </Dialog >
     )

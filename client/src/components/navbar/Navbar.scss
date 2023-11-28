@@ -1,0 +1,48 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em 10em;
+
+  .logo {
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: #2c3352;
+  }
+
+  .main-nav {
+    &-menu {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      color: #2c3352;
+      font-weight: 600;
+    }
+
+    &-item {
+      transition: 300ms all;
+
+      &:hover {
+        cursor: pointer;
+        color: rgba($color: #2c3352, $alpha: 0.7);
+      }
+    }
+  }
+
+  .login-button {
+    padding: .7em 1.2em .8em 1.2em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 .2em .5rem .2rem #e0e0e0;
+    transition: 300ms all;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 .2em .5rem .2rem darkgray;
+    }
+  }
+}

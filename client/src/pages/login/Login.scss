@@ -8,18 +8,44 @@
     width: fit-content;
     height: fit-content;
     padding: 2em;
+    width: 40vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
 
     .form-title {
       font-weight: 600;
       font-size: 2rem;
+      color: #38444c;
     }
 
     .form-container {
       display: flex;
       flex-direction: column;
+      width: 60%;
+      margin: 0 auto;
       gap: 1em;
       padding: 2em;
+
+      .loading-button {
+        background-color: var(--second-bg);
+        width: fit-content;
+        margin: 0 auto;
+
+        >* {
+          color: #fff;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 420px) {
+  .form-card {
+    padding: 1em !important;
+    width: 60% !important;
+  }
+
+  .form-container {
+    padding: 2em 0 0 0 !important;
   }
 }

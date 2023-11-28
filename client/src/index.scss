@@ -1,3 +1,8 @@
+:root {
+  --second-bg: #38447f;
+  --third-bg: #38444c;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -27,13 +32,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 .btn {
-  background-color: #38444c !important;
+  background-color: var(--second-bg) !important;
   width: fit-content;
   color: #f0f0f0;
+  transition: 300ms all;
+  &:hover {
+    background-color: var(--third-bg) !important;
+  }
 }
 
 .centered {

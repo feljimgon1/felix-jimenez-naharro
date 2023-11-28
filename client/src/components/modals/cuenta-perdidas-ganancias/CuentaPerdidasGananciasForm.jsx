@@ -99,8 +99,8 @@ export default function CuentaPerdidasGananciasForm({ open, setOpen }) {
         </form>
       </DialogContent>
       <DialogActions>
-        <Button variant='contained' className='btn-contained' onClick={handleClose}>Cancel</Button>
-        <Button variant='contained' className='btn-contained' onClick={handleClose}>Guardar</Button>
+        <Button variant='contained' className='btn btn-contained' onClick={handleClose}>Cancel</Button>
+        <Button variant='contained' className='btn btn-contained' onClick={handleClose}>Guardar</Button>
       </DialogActions>
     </Dialog>
   )

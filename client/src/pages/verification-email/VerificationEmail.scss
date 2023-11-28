@@ -1,0 +1,164 @@
+.verification-email-container {
+  height: 99vh;
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: none;
+
+  .verification-spinner {
+    position: relative;
+    height: 125px;
+    width: 125px;
+    display: inline-block;
+    border: 3px solid #e0e0e0;
+    border-radius: 50%;
+    border-left-color: #5cb85c;
+    animation: rotate linear 1.2s infinite;
+
+    @keyframes rotate {
+      50% {
+        border-left-color: #9b59b6;
+      }
+
+      75% {
+        border-left-color: #e67e22;
+      }
+
+      100% {
+        rotate: 360deg;
+      }
+    }
+
+    .check-icon {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 28px;
+        transform: scaleX(-1) rotate(135deg);
+        height: 56px;
+        width: 28px;
+        border-top: 4px solid #5cb85c;
+        border-right: 4px solid #5cb85c;
+        transform-origin: left top;
+        animation: check-in 0.8s ease;
+      }
+
+      @keyframes check-in {
+        0% {
+          height: 0;
+          width: 0;
+          opacity: 1;
+        }
+
+        20% {
+          height: 0;
+          width: 28px;
+          opacity: 1;
+        }
+
+        40% {
+          height: 56px;
+          width: 28px;
+          opacity: 1;
+        }
+
+        100% {
+          height: 56px;
+          width: 28px;
+          opacity: 1;
+        }
+      }
+    }
+
+    .error-icon {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 35%;
+        left: 32%;
+        transform: scaleX(-1) rotate(135deg);
+        height: 28px;
+        width: 28px;
+        border-top: 4px solid #ff5656;
+        border-right: 4px solid #ff5656;
+        transform-origin: left top;
+        animation: error-in 0.8s ease;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 67%;
+        left: 68%;
+        transform: scaleX(-1) rotate(-45deg);
+        height: 28px;
+        width: 28px;
+        border-top: 4px solid #ff5656;
+        border-right: 4px solid #ff5656;
+        transform-origin: left top;
+        animation: error-in 0.8s ease;
+      }
+
+      @keyframes error-in {
+        0% {
+          height: 0;
+          width: 0;
+          opacity: 1;
+        }
+
+        20% {
+          height: 0;
+          width: 28px;
+          opacity: 1;
+        }
+
+        40% {
+          height: 28px;
+          width: 28px;
+          opacity: 1;
+        }
+
+        100% {
+          height: 28px;
+          width: 28px;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+  .verification-text {
+    opacity: 0;
+    max-width: 75%;
+    transition: 300ms all;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .verification-spinner-finished {
+    animation: none;
+    transition: border 0.5s ease-out;
+  }
+
+  .error {
+    border-color: #ff5656 !important;
+  }
+
+  .success {
+    border-color: #5cb85c !important;
+  }
+
+}
+
+.display-none {
+  display: none !important;
+
+}

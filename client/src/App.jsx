@@ -1,6 +1,6 @@
 import './App.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import WelcomeHeader from './components/welcome/welcomeHeader/WelcomeHeader';
+import Home from './components/home/home/Home';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Drawer from './pages/drawer/Drawer';
@@ -13,13 +13,20 @@ import EstrategiaCirculante from './pages/tables/estrategia-circulante/Estrategi
 import Results from './pages/tables/results/Results';
 import Dashboard from './pages/dashboard/Dashboard';
 import Profile from './pages/profile/Profile';
+import { VerificationEmail } from './pages/verification-email/VerificationEmail';
+import PrivateRoute from './utils/PrivateRoute';
 
 const router = createBrowserRouter([
-  { path: '/', element: <WelcomeHeader /> },
+  { path: '/', element: <Home /> },
   { path: '/register', element: <Register /> },
   { path: '/login', element: <Login /> },
+  { path: '/verification-email', element: <VerificationEmail /> },
   {
-    path: '/dashboard', element: <Drawer />, children: [
+    path: '/dashboard', element: (
+      <PrivateRoute>
+        <Drawer />
+      </PrivateRoute>
+    ), children: [
       { path: '', element: <Dashboard />},
       { path: 'balance', element: <Balance /> },
       { path: 'cuenta-perdidas-ganancias', element: <CuentaPerdidasGanancias /> },

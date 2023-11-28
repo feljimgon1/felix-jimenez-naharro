@@ -16,10 +16,10 @@ function getValues(l) {
 }
 
 const data = {
-    labels: ['Activos', 'Pasivos'],
+    labels: ['Balance', 'Pasivos'],
     datasets: [
         {
-            label: 'Balance',
+            label: 'Valor',
             data: [activosValues, pasivosValues],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

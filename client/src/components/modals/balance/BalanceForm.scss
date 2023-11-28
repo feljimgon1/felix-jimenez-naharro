@@ -31,15 +31,6 @@
   margin: 1em;
 }
 
-.btn-contained {
-  background-color: #38444c !important;
-  margin: 1em;
-
-  &:hover {
-    background-color: #38447f !important;
-  }
-}
-
 @media (min-width: 768px) {
   .balance-form-dialog {
     display: grid;

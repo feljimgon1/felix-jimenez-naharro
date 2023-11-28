@@ -1,19 +1,22 @@
 .register-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 3em;
 
   .form-card {
-    width: fit-content;
     height: fit-content;
     padding: 2em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+    border-radius: 5px;
+    width: 75vw;
+
     .form-title {
       font-weight: 600;
       font-size: 2rem;
-
+      color: #38444c;
     }
 
     .form-container {
@@ -21,12 +24,88 @@
       flex-direction: column;
       gap: 1em;
       padding: 2em;
+      padding-bottom: 0;
+
+      .form-inner-container {
+        display: flex;
+        gap: 1em;
+      }
+
+      .datos-personales {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        border-right: 2px solid #e0e0e0;
+        padding-right: 1em;
+        width: 50%;
+      }
+
+      .datos-empresa {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 50%;
+      }
+
+      .note {
+        font-style: italic;
+      }
+
+      .datos-empresa,
+      .datos-personales {
+        .title {
+          font-weight: 600;
+          color: #38444c;
+        }
+      }
 
       .acc-exists {
         margin: 0 auto;
       }
+
+      .loading-button {
+        background-color: var(--second-bg);
+        width: fit-content;
+        margin: 0 auto;
+        > * {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    .form-inner-container {
+      flex-direction: column !important;
+    }
+
+    .datos-personales {
+      padding-right: 0 !important;
+      border-right: none !important;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 1.5em;
+      width: 100% !important;
+    }
+
+    .datos-empresa {
+      width: 100% !important;
     }
 
   }
+}
 
+@media (max-width: 420px) {
+  .register-container {
+    .form-card {
+      padding: 1em !important;
+      width: 100% !important;
+    }
+
+    .form-container {
+      padding: 2em 0 0 0 !important;
+    }
+  }
 }
