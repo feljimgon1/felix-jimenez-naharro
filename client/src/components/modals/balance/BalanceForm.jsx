@@ -166,7 +166,6 @@ export default function BalanceForm({ open, setOpen, activos, pasivos, handleOpe
     const res = await updateBalance(currentActivos, currentPasivos, updatedActivos, updatedPasivos)
     
     // Update FE depending on response
-    console.log(res.message, res.success);
     handleOpenSnackBar(res.message, res.success)
     dispatch(setActivosData(currentActivos))
     dispatch(setPasivosData(currentPasivos))

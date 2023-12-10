@@ -22,7 +22,6 @@ export const updateCuentaPerdidasGanancias = async (cuentaPerdidasGanancias, upd
   var response = undefined
   var token = JSON.parse(localStorage.getItem('user'))?.token
   var parsedCuentaPerdidasGanancias = cuentaPerdidasGananciasToServer(cuentaPerdidasGanancias, updatedCuentaPerdidasGanancias)
-  console.log(parsedCuentaPerdidasGanancias);
   const requestOptions = {
     method: 'PUT',
     headers: {

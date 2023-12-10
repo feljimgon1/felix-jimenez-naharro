@@ -1,11 +1,11 @@
 import parseToServer from "../parsers/tables/clientToServer";
 
-export default function cuentaPerdidasGananciasToServer(cuentaPerdidasGanancias, updatedCuentaPerdidasGanancias) {
+export default function cuentaPerdidasGananciasToServer(estrategiaMercado, updatedEstrategiaMercado) {
   var res = {}
-  for (let i = 0; i < cuentaPerdidasGanancias.length; i++) {
-    if (!cuentaPerdidasGanancias[i].composed) {
-      if (updatedCuentaPerdidasGanancias.includes(cuentaPerdidasGanancias[i].name)) {
-        let parsedName = parseToServer(cuentaPerdidasGanancias[i].name)
+  for (let i = 0; i < estrategiaMercado.length; i++) {
+    if (!estrategiaMercado[i].composed) {
+      if (updatedEstrategiaMercado.includes(estrategiaMercado[i].name)) {
+        let parsedName = parseToServer(estrategiaMercado[i].name)
         if (parsedName === 'importeNetoCifraDeVentas') parsedName = 'importeNetoCifraVentas'
         if (parsedName === 'otrosIngresosDeExplotacion') parsedName = 'otrosIngresosExplotacion'
         if (parsedName === 'tRPPI') parsedName = 'trppi'
@@ -13,7 +13,7 @@ export default function cuentaPerdidasGananciasToServer(cuentaPerdidasGanancias,
         if (parsedName === 'gastoDePersonal') parsedName = 'gastoPersonal'
         if (parsedName === 'otrosGastosDeExplotacion') parsedName = 'otrosGastosExplotacion'
         if (parsedName === 'cAT') parsedName = 'cat'
-        res[parsedName] = cuentaPerdidasGanancias[i].value
+        res[parsedName] = estrategiaMercado[i].value
       }
     }
   }

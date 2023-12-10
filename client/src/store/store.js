@@ -6,12 +6,14 @@ import {
 import thunk from "redux-thunk" 
 import balanceReducer from '../redux/slices/balanceSlice'
 import cuentaPerdidasGananciasReducer from '../redux/slices/cuentaPerdidasGananciasSlice'
+import estrategiaMercadoReducer from '../redux/slices/estrategiaMercadoSlice'
 import registerReducer from '../redux/slices/registerSlice'
 
 const rootReducer = combineReducers({
   register: registerReducer,
   balance: balanceReducer,
   cuentaPerdidasGanancias: cuentaPerdidasGananciasReducer,
+  estrategiaMercado: estrategiaMercadoReducer,
 });
 
 export const store = (preloadedState) => {

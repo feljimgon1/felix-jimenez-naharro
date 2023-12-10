@@ -1,5 +1,6 @@
-import {ACTIVOS_CONSTANTS, PASIVOS_CONSTANTS} from '../../constants/balance/Balance'
+import { ACTIVOS_CONSTANTS, PASIVOS_CONSTANTS } from '../../constants/balance/Balance'
 import { CUENTA_PERDIDAS_GANANCIAS_CONSTANTS } from '../../constants/cuenta-perdidas-ganancias/CuentaPerdidasGanancias'
+import { ESTRATEGIA_MERCADO_CONSTANTS } from '../../constants/estrategia-mercado/EstrategiaMercado'
 
 const checkComposed = (composed) => {
   return (
@@ -35,6 +36,18 @@ const parsePasivo = (oldName) => {
 const parseCuentaPerdidasGanancias = (oldName) => {
   let keys = Object.keys(CUENTA_PERDIDAS_GANANCIAS_CONSTANTS[0])
   let values = Object.values(CUENTA_PERDIDAS_GANANCIAS_CONSTANTS[0])
+  let res = undefined
+  for (let i = 0; i < keys.length; i++) {
+    if (keys[i] === oldName) {
+      res = values[i]
+    }
+  }
+  return res
+}
+
+const parseEstrategiaMercado = (oldName) => {
+  let keys = Object.keys(ESTRATEGIA_MERCADO_CONSTANTS[0])
+  let values = Object.values(ESTRATEGIA_MERCADO_CONSTANTS[0])
   let res = undefined
   for (let i = 0; i < keys.length; i++) {
     if (keys[i] === oldName) {
@@ -207,6 +220,24 @@ export function flatCuentaPerdidasGanancias(cuentaPerdidasGanancias) {
       res[16].value = res[14].value - res[15].value
       res[19].value = res[17].value - res[18].value
       res[20].value = res[19].value + res[16].value
+    }
+  }
+  return res
+}
+
+export function flatEstrategiaMercado(estrategiaMercado) {
+  var res = []
+  for (const key in estrategiaMercado.estrategiaMercado) {
+    if (key === 'gastoEmpleado' ||
+      key === 'numeroEmpleados' ||
+      key === 'objetivoVentasAnyoCinco' ||
+      key === 'ventasAlcanzadas' ||
+      key === 'otrosGastosExplotacionPorVentas' ||
+      key === 'aprovisionamientoPorVentas') {
+      let newName = parseEstrategiaMercado(key)
+      let composed = checkComposed(key)
+      let value = estrategiaMercado.estrategiaMercado[key]
+      res.push({ name: newName, value: value, composed: composed })
     }
   }
   return res

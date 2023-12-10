@@ -29,7 +29,6 @@ export default function CuentaPerdidasGananciasForm({ open, setOpen, cuentaPerdi
   }
 
   const findField = (field) => {
-    console.log(field, cuentaPerdidasGanancias);
     return cuentaPerdidasGanancias.find(item =>
       parseField(item.name) === parseField(field))
   }
@@ -145,7 +144,6 @@ export default function CuentaPerdidasGananciasForm({ open, setOpen, cuentaPerdi
       return e.name
     }).indexOf(selectedField.name)
     const composedComponent = changeComposedComponent(updatedField)
-    console.log(composedComponent);
     var newArr = [...currentCuentaPerdidasGanancias]
     newArr[index] = updatedField
     if (composedComponent === 0) {
